@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class LateUpdateMove : MonoBehaviour
 {
+    public float speed = 2f;
     void LateUpdate()
     {
-        transform.Translate(0, 0, 0.01f);
+        transform.Translate(0, 0, Time.deltaTime * speed);
     }
 }
